@@ -38,11 +38,11 @@
     <div class="container">
 
       <div class="starter-template">
-	    <?php include 'query_fns.php'?>
 	    <h1>Results Page </h1>
             <p class="lead"> Please wait while this loads... </p>
 
 	    <?php 
+	       include 'query_fns.php';
 
                $required_fields_present = true;
                // Argument validation... 
@@ -79,7 +79,7 @@
                echo "<p> # of hot days: $hot_days </p>";
                echo "<p> Backburning: $backburning </p>";
 
-		if(!required_fields_present)
+		if(!$required_fields_present)
 		{
 			echo "<h1> <span class=\"label label-warning\">";
 			echo "Required fields missing, couldn't model data. Try again?";
