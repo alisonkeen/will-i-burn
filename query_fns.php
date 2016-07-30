@@ -11,7 +11,7 @@ function chance_of_fire(int $region, int $month, int $temp, int $hot_days, int $
    $odds_of_fire = 50;
    // this is where the query goes... 
 
-   string $query_url = "http://localhost:8123/perc?month=$month&region=$region&dry=0&temp=$temp&above.35=$hot_days&burnoff=$backburning"
+   $query_url = "http://localhost:8123/perc?month=$month&region=$region&dry=0&temp=$temp&above.35=$hot_days&burnoff=$backburning"
 
    return $odds_of_fire;
 }
