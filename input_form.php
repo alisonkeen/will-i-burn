@@ -80,8 +80,6 @@
      
 
 
-</div> <!-- End Row -->
-<div class="row">
    <div class="col-md-4">
       <input class="btn btn-lg btn-danger" type="submit" value="Calculate the Odds!">
    </div>
