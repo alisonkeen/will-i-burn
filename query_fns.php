@@ -2,7 +2,7 @@
 
 
 
-function get_region_name(int $region_num)
+function get_region_name($region_num, $dbconn)
 {
    $regions = pg_query($dbconn, "select region from sagovtregions where gid = $region_num");
    if (!$regions) {
