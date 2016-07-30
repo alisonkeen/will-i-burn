@@ -19,13 +19,15 @@
 	}
 
 	while ($row = pg_fetch_row($result)) {
-	  echo "  <option value=\"$row[0]\">$row[1]</option>\n";
+	  echo "  <option value=\"$row[0]\"";
+	  if($row[0] == $region) echo "selected=\"selected\"";
+	  echo ">$row[1]</option>\n";
 	}
+			// examples of what end syntax should look like
+		      // <option name="1"> Adelaide Hills </option>
+		      //  <option name="2" selected=\"selected\"> Adelaide Metro </option>
 ?>
 
-
-		      <option name="1"> Adelaide Hills </option>
-		      <option name="2"> Adelaide Metro </option>
 
 		   </select>
 		   <br/><br/>
