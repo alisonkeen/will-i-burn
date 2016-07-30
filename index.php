@@ -49,7 +49,7 @@
        <div class="col-md-4">
 	    <legend>Select Your Region:</legend>
 
-            <select name="Region">
+            <select name="region">
 <?php
 $result = pg_query($dbconn, "select gid,region from sagovtregions");
 if (!$result) {
@@ -58,7 +58,7 @@ if (!$result) {
 }
 
 while ($row = pg_fetch_row($result)) {
-  echo "                   <option name=\"$row[0]\">$row[1]</option>\n";
+  echo "                   <option value=\"$row[0]\">$row[1]</option>\n";
 }
 ?>
             </select>
@@ -69,18 +69,18 @@ while ($row = pg_fetch_row($result)) {
            <div class="col-md-4">
                    <legend> Select Month: </legend>
                    <select name="month">
-                      <option name="1"> January </option>
-                      <option name="2"> February </option>
-                      <option name="3"> March </option>
-                      <option name="4"> April </option>
-                      <option name="5"> May </option>
-                      <option name="6"> June </option>
-                      <option name="7"> July </option>
-                      <option name="8"> August </option>
-                      <option name="9"> September </option>
-                      <option name="10"> October </option>
-                      <option name="11"> November </option>
-                      <option name="12"> December </option>
+                      <option value="1"> January </option>
+                      <option value="2"> February </option>
+                      <option value="3"> March </option>
+                      <option value="4"> April </option>
+                      <option value="5"> May </option>
+                      <option value="6"> June </option>
+                      <option value="7"> July </option>
+                      <option value="8"> August </option>
+                      <option value="9"> September </option>
+                      <option value="10"> October </option>
+                      <option value="11"> November </option>
+                      <option value="12"> December </option>
                    </select>
                    <br/><br/>
            </div>
@@ -99,13 +99,10 @@ while ($row = pg_fetch_row($result)) {
 
 	<div class="col-md-4">
                    <legend> Assume backburning has been happening recently? </legend>
-                   <div class="radio-inline"> <label>
-                   <input type="radio" name="backburning" value="1"> Yes 
+                   <div class="checkbox"> <label>
+                   <input type="checkbox" name="backburning" value="1"> Yes 
                    </label></div>
 
-                   <div class="radio-inline"> <label>
-                   <input type="radio" name="backburning" value="0"> No
-                   </label></div>
                    <br/><br/>
            </div>
 
