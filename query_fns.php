@@ -2,6 +2,8 @@
 
 function get_region_name(int $region_num)
 {
+   if($region_num == 0)
+      return "Undefined/missing";
 
    // TODO write query here 
    $region_name = "Limestone Coast";

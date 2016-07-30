@@ -65,7 +65,7 @@
 		}	
 
                //$temp = $_GET["temp"];
-               $backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
+               $temp = isset($_GET["temp"]) ? $_GET["temp"] : 0;
 
                $hot_days = isset($_GET["hot_days"]) ? $_GET["hot_days"] : 0;
                //$hot_days = $_GET["hot_days"];
@@ -75,7 +75,7 @@
 
                echo "<p> Region: "+get_region_name($region)+" </p>";
                echo "<p> Month: $month </p>";
-               echo "<p> Month: $temp </p>";
+               echo "<p> Degree of heat: $temp </p>";
                echo "<p> # of hot days: $hot_days </p>";
                echo "<p> Backburning: $backburning </p>";
 
