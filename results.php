@@ -43,18 +43,35 @@
             <p class="lead"> Please wait while this loads... </p>
 
 	    <?php 
+
+               $required_fields_present = true;
                // Argument validation... 
-               $region = isset($_GET["region"]) ? $_GET["region"] : 1;
+               if(isset($_GET["region"]))
+			$region = $_GET["region"];
+		else
+		{
+			$region = 0;
+			$required_fields_present = false;
+		}	
                //$region = $_GET["region"];
 
-               $month = $_GET["month"];
+               //$month = $_GET["month"];
+               if(isset($_GET["month"]))
+			$month = $_GET["month"];
+		else
+		{
+			$month = 0;
+			$required_fields_present = false;
+		}	
 
-               $temp = $_GET["temp"];
+               //$temp = $_GET["temp"];
+               $backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 
                $hot_days = isset($_GET["hot_days"]) ? $_GET["hot_days"] : 0;
                //$hot_days = $_GET["hot_days"];
 
-               $backburning = $_GET["backburning"];
+               //$backburning = $_GET["backburning"];
+               $backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 
                echo "<p> Region: "+get_region_name($region)+" </p>";
                echo "<p> Month: $month </p>";
@@ -62,12 +79,22 @@
                echo "<p> # of hot days: $hot_days </p>";
                echo "<p> Backburning: $backburning </p>";
 
-	       $historical_odds = chance_of_fire($region, $month, $temp, $hot_days, $backburning);
+		if(!required_fields_present)
+		{
+			echo "<h1> <span class=\"label label-warning\">";
+			echo "Required fields missing, couldn't model data. Try again?";
+		}
+		else
+		{
+		       $historical_odds = chance_of_fire($region, $month, $temp, $hot_days, $backburning);
 	       echo "<h1> Chance of fire: </h1>";
 	       echo "<h1> <span class=\"label label-danger\"> $historical_odds % </span> </h1>";
+		}
 	    ?>
 
       </div>
+
+	<?php include 'input_form.php' ?>
 
     </div><!-- /.container -->
 
