@@ -91,7 +91,7 @@ while ($row = pg_fetch_row($result)) {
                    <br/><br/>
            </div>
            <div class="col-md-4">
-                   <legend> Number of days above 35.C this year (assumption): </legend>
+                   <legend> Number of days above 35&deg;C this year (assumption): </legend>
                    <input type="range" name="hot_days" min="1" max="15" >
                    <br/><br/>
            </div>
