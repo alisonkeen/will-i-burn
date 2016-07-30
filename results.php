@@ -57,7 +57,9 @@
 
                //$month = $_GET["month"];
                if(isset($_GET["month"]))
+		{
 			$month = $_GET["month"];
+		}
 		else
 		{
 			$month = 0;
@@ -96,7 +98,8 @@
 	function get_month_name($month)
 	{
 	   if(!is_int($month)) {
-		return "undefined";
+	       // so check if it's a numeric string?
+		return "not an int";
 		$required_fields_present = false;
 	   }
 
