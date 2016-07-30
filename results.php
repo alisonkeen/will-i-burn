@@ -39,7 +39,6 @@
 
       <div class="starter-template">
 	    <h1>Results Page </h1>
-            <p class="lead"> Please wait while this loads... </p>
 
 	    <?php 
 	       include 'query_fns.php';
@@ -76,12 +75,12 @@
                $backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 
                $region_name = get_region_name($region);
-               echo "<p> Region: $region_name </p>";
+               echo "<p> Region: $region_name <br/>";
 	       $month_name = get_month_name($month);
-               echo "<p> Month: $month_name </p>";
-               echo "<p> Degree of heat: $temp </p>";
-               echo "<p> # of hot days: $hot_days </p>";
-               echo "<p> Backburning: $backburning </p>";
+               echo "Month: $month_name <br/>";
+               echo "Degree of heat: $temp <br/>";
+               echo "# of hot days: $hot_days <br/>";
+               echo "Backburning: $backburning </p>";
 
 		if(!$required_fields_present)
 		{
@@ -98,9 +97,15 @@
 	function get_month_name($month)
 	{
 	   if(!is_int($month)) {
-	       // so check if it's a numeric string?
-		return "not an int";
-		$required_fields_present = false;
+	       // so check if it's a numeric string and convert...
+		if(is_numeric($month)) {
+ 		   $quicktemp = $month + 0;
+		   $month = $quicktemp;
+		}
+		else {
+		   $required_fields_present = false;
+		   return "not an int";
+		}
 	   }
 
 	   $month_name = DateTime::createFromFormat('m', $month)->format('F');
