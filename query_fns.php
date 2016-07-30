@@ -23,3 +23,4 @@ function chance_of_fire(int $region, int $month, int $temp, int $hot_days, int $
 
    return $odds_of_fire;
 }
+?>
