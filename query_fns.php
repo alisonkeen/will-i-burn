@@ -1,14 +1,15 @@
-<?php 
+<?php
+
+include 'pgsql_connect.php';
 
 function get_region_name(int $region_num)
 {
-   if($region_num == 0)
-      return "Undefined/missing";
+   $regions = pg_query($dbconn, "select region from sagovtregions where gid = $region_num");
+   if (!$regions) {
+     return "Not found ($region_num)";
+   }
 
-   // TODO write query here 
-   $region_name = "Limestone Coast";
-
-   return $region_name;
+   return $regions[0];
 }
 
 function chance_of_fire(int $region, int $month, int $temp, int $hot_days, int $backburning )
