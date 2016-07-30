@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Will I Burn? Govhack 2016">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.ico"> 
+    <link rel="icon" href="favicon.png"> 
 
     <title>Will I Burn? | Govhack Unleashed 2016</title>
 
@@ -43,21 +43,28 @@
             <p class="lead"> Please wait while this loads... </p>
 
 	    <?php 
-              
-               $region = $_GET["region"];
+               // Argument validation... 
+               $region = isset($_GET["region"]) ? $_GET["region"] : 1;
+               //$region = $_GET["region"];
+
                $month = $_GET["month"];
+
                $temp = $_GET["temp"];
-               $hot_days = $_GET["hot_days"];
+
+               $hot_days = isset($_GET["hot_days"]) ? $_GET["hot_days"] : 0;
+               //$hot_days = $_GET["hot_days"];
+
                $backburning = $_GET["backburning"];
 
-               if($region) echo "<p> Region: $region </p>";
-               if($month) echo "<p> Month: $month </p>";
-               if($temp) echo "<p> Month: $temp </p>";
-               if($hot_days) echo "<p> # of hot days: $hot_days </p>";
-               if($backburning) echo "<p> Backburning: $backburning </p>";
+               echo "<p> Region: "+get_region_name($region)+" </p>";
+               echo "<p> Month: $month </p>";
+               echo "<p> Month: $temp </p>";
+               echo "<p> # of hot days: $hot_days </p>";
+               echo "<p> Backburning: $backburning </p>";
 
 	       $historical_odds = chance_of_fire($region, $month, $temp, $hot_days, $backburning);
-	       echo "Chance of fire: $historical_odds %";
+	       echo "<h1> Chance of fire: </h1>";
+	       echo "<h1> <span class="label label-danger"> $historical_odds % </span> </h1>";
 	    ?>
 
       </div>
