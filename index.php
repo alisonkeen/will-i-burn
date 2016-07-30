@@ -61,6 +61,10 @@
 	  </fieldset>
 	</form>
 
+     <p> Attempting database connection... </p>
+     <?php include 'pgsql_connect.php' ?>
+     <p> Back from DB check... </p>
+
       </div>
 
     </div><!-- /.container -->
