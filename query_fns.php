@@ -1,6 +1,6 @@
 <?php
 
-include 'pgsql_connect.php';
+
 
 function get_region_name(int $region_num)
 {
@@ -23,3 +23,4 @@ function chance_of_fire(int $region, int $month, int $temp, int $hot_days, int $
 
    return $odds_of_fire;
 }
+?>
