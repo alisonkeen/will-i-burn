@@ -8,7 +8,22 @@ install.packages("rpart")
 install.packages("plumber")
 ```
 
-### Running
+### Running on ghost Server
+The API has been setup as a service, which will startup automatically. If you change the code (e.g. git pull to the server), you should restart the service:
+```
+sudo systemctl restart R 
+```
+
+You can check status of the service with:
+```
+sudo systemctl status R
+```
+And tail logs with
+```
+sudo journalctl -u R -f
+```
+
+### Running Locally
 Running from the command line:
 ```r -f web-api-server.R```
 
