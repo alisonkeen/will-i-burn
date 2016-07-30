@@ -64,7 +64,7 @@
 
 	       $historical_odds = chance_of_fire($region, $month, $temp, $hot_days, $backburning);
 	       echo "<h1> Chance of fire: </h1>";
-	       echo "<h1> <span class="label label-danger"> $historical_odds % </span> </h1>";
+	       echo "<h1> <span class=\"label label-danger\"> $historical_odds % </span> </h1>";
 	    ?>
 
       </div>
