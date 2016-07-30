@@ -2,17 +2,34 @@
 <div class="container">
 <h1> Want to change the parameters? </h1>
 
-<form action="results2.php">
+<form action="results.php">
 
 <div class="row"> 
 
            <div class="col-md-4"> 
-		   <legend> Select Your Region: </legend>
+
+		   Region: 
 		   <select name="region"> 
+
+<?php
+	$result = pg_query($dbconn, "select gid,region from sagovtregions");
+	if (!$result) {
+	  echo "An error occurred.\n";
+	  exit;
+	}
+
+	while ($row = pg_fetch_row($result)) {
+	  echo "  <option value=\"$row[0]\">$row[1]</option>\n";
+	}
+?>
+
+
 		      <option name="1"> Adelaide Hills </option>
 		      <option name="2"> Adelaide Metro </option>
+
 		   </select>
 		   <br/><br/>
+
            </div>
 
            <div class="col-md-4">
@@ -27,7 +44,7 @@
 		      
 		      echo "> $monthname </option>";
                       // <option value="1"> January </option>
-                      // <option value="2"> February </option>
+                      // <option value="2" selected="selected"> February </option>
                       // <option value="3"> March </option>
 		   } ?>
                    </select>
