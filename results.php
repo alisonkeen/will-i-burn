@@ -73,8 +73,10 @@
                //$backburning = $_GET["backburning"];
                $backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 
-               echo "<p> Region: "+get_region_name($region)+" </p>";
-               echo "<p> Month: $month </p>";
+               $region_name = get_region_name($region);
+               echo "<p> Region: $region_name </p>";
+	       $month_name = get_month_name($month);
+               echo "<p> Month: $month_name </p>";
                echo "<p> Degree of heat: $temp </p>";
                echo "<p> # of hot days: $hot_days </p>";
                echo "<p> Backburning: $backburning </p>";
@@ -90,6 +92,19 @@
 	       echo "<h1> Chance of fire: </h1>";
 	       echo "<h1> <span class=\"label label-danger\"> $historical_odds % </span> </h1>";
 		}
+
+	function get_month_name($month)
+	{
+	   if(!is_int($month)) {
+		return "undefined";
+		$required_fields_present = false;
+	   }
+
+	   $month_name = DateTime::createFromFormat('m', $month)->format('F');
+	   return $month_name;
+	}
+
+
 	    ?>
 
       </div>
