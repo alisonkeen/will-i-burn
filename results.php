@@ -50,6 +50,12 @@
                $hot_days = $_GET["hot_days"];
                $backburning = $_GET["backburning"];
 
+               if($region) echo "<p> Region: $region </p>";
+               if($month) echo "<p> Month: $month </p>";
+               if($temp) echo "<p> Month: $temp </p>";
+               if($hot_days) echo "<p> # of hot days: $hot_days </p>";
+               if($backburning) echo "<p> Backburning: $backburning </p>";
+
 	       $historical_odds = chance_of_fire($region, $month, $temp, $hot_days, $backburning);
 	       echo "Chance of fire: $historical_odds %";
 	    ?>
