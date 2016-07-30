@@ -18,7 +18,14 @@
     <![endif]-->
   </head>
   <body>
+    <?php include 'query_fns.php'?>
     <h1>Results Page Here </h1>
+
+    <?php 
+
+       $historical_odds = chance_of_fire();
+       echo "Chance of fire: $historical_odds %";
+    ?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
