@@ -1,6 +1,6 @@
 <?php
 
-include 'pgsql_connect.php';
+
 
 function get_region_name(int $region_num)
 {

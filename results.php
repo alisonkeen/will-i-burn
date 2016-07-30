@@ -117,6 +117,7 @@
 
       </div>
 
+  <?php include 'pgsql_connect.php' ?>
 	<?php include 'input_form.php' ?>
 
     </div><!-- /.container -->
