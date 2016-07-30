@@ -1,0 +1,27 @@
+## Packages 
+
+install.packages("caret")
+install.packages("rpart")
+install.packages("plumber")
+
+library(caret)
+library(rpart)
+library(plumber)
+
+There needs to be a file named df availalble to R with the columns
+"Year"            "Month"           "Region"              "Temp"           
+"Above.35"        "Burnoff"         "Hectares"        "Region.Hectares" "HectarePerc"    
+"Bushfire"        "Severe.Bushfire"
+
+##Plumber code
+
+#' @post /perc
+perc <- function(Month, Region, Dry, Temp, Above.35, Burnoff){
+  newdata <- data.frame(Month, Region, Dry, Temp, Above.35, Burnoff)
+  colnames(newdata) <- c("Month", "Region", "Dry", "Temp", "Above.35", "Burnoff")
+  predict(model.perc, newdata = newdata)
+}
+
+The model to be trained is 
+
+model.perc <- train(HectarePerc ~ Month+Region+Dry+Temp+Above.35+Burnoff, data = df, method = "rpart")
