@@ -1,3 +1,4 @@
+<?php include 'pgsql_connect.php' ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -117,7 +118,6 @@
 
       </div>
 
-  <?php include 'pgsql_connect.php' ?>
 	<?php include 'input_form.php' ?>
 
     </div><!-- /.container -->
