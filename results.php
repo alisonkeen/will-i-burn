@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Will I Burn? Govhack 2016">
     <meta name="author" content="">
-    <!-- <link rel="icon" href="../../favicon.ico"> -->
+    <link rel="icon" href="favicon.ico"> 
 
     <title>Will I Burn? | Govhack Unleashed 2016</title>
 
