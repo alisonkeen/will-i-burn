@@ -1,12 +1,10 @@
 
 <div class="container">
-<h1> Will I Burn? </h1>
+<h1> Want to change the parameters? </h1>
 
 <form action="results2.php">
 
 <div class="row"> 
-
-
 
            <div class="col-md-4"> 
 		   <legend> Select Your Region: </legend>
@@ -17,24 +15,25 @@
 		   <br/><br/>
            </div>
 
-           <div class="col-md-4"> 
-		   <legend> Select Month: </legend>
-		   <select name="month"> 
-		      <option name="1"> January </option>
-		      <option name="2"> February </option>
-		      <option name="3"> March </option>
-		      <option name="4"> April </option>
-		      <option name="5"> May </option>
-		      <option name="6"> June </option>
-		      <option name="7"> July </option>
-		      <option name="8"> August </option>
-		      <option name="9"> September </option>
-		      <option name="10"> October </option>
-		      <option name="11"> November </option>
-		      <option name="12"> December </option>
-		   </select>
-		   <br/><br/>
+           <div class="col-md-4">
+                   <legend> Select Month: </legend>
+                   <select name="month">
+		<?php 
+		   for($eachmonth = 1; $eachmonth < 13; $eachmonth++)
+		   {
+                      $monthname = get_month_name($eachmonth);
+                      echo "<option value=\"$eachmonth\"";
+		      if($eachmonth == $month) echo "selected=\"selected\"";
+		      
+		      echo "> $monthname </option>";
+                      // <option value="1"> January </option>
+                      // <option value="2"> February </option>
+                      // <option value="3"> March </option>
+		   } ?>
+                   </select>
+                   <br/><br/>
            </div>
+
            <div class="col-md-4"> 
 		   <legend> Will this be a relatively hot year? </legend>
 		   <input type="range" id="temp" min="0" max="100" step="10" >
