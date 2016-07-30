@@ -1,4 +1,4 @@
-
+<?php include 'pgsql_connect.php' ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,10 +49,17 @@
 	    <legend>Select Your Region:</legend>
 
             <select name="Region">
-	       <option name="adelaide_hills">Adelaide Hills</option>
-               <option name="metro_adelaide">Adelaide Metro</option>
-               <option name="central_region">Central Region</option>
-               <option name="outback">Outback</option>
+<?php
+$result = pg_query($dbconn, "select gid,region from sagovtregions");
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
+}
+
+while ($row = pg_fetch_row($result)) {
+  echo "                   <option name=\"$row[0]\">$row[1]</option>\n";
+}
+?>
             </select>
 
 	    <br/><br/>
