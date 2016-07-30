@@ -1,10 +1,5 @@
 <?php 
 
-function chance_of_fire()
-{
-   $odds_of_fire = 50;
-   return $odds_of_fire;
-}
 
 function chance_of_fire(int $region, int $month, int $temp, int $hot_days, int $backburning )
 {
