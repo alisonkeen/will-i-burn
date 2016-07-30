@@ -72,7 +72,7 @@
            </div>
 
            <div class="col-md-4">
-               <h2> Alison Keen </h2> 
+               <h2> Alison  </h2> 
               <p> Alison has been doing bits and pieces where she can, such as creating forms and basic interfaces, updating the team hackerspace, and generally nodding along and smiling. </p>
            </div>
 
