@@ -42,7 +42,7 @@
       <div class="starter-template">
         <h1>Will I Burn?</h1>
 
-        <p class="lead"> Find out the bushfire risk for your region </p>
+        <p class="lead">Find out your bushfire risk</p>
 
         <div class="alert alert-success" role="alert">	
 	   There are currently <strong> no </strong> active bushfires
