@@ -58,9 +58,12 @@
                         data-toggle="collapse"> (?) </button>
                    </legend>
                    <div id="explain_temp" class="collapse">
-                      Explanation here...  text text <br/>
-                      elephants <br/> tigers <br/> ipineapplies <br/>
-                         foxes <br/> testing <br/>
+                    Its getting hot in here! <br/>
+                    Climate Change means the average maximum <br/>
+                    temperature is expected to increase.<br/>
+                    This variable lets you see what increases <br/>
+                    in average maximum monthly temperatures<br/>
+                    will do to bushfire risk in your region<br/>
                    </div>
 
                    <div> low (0&deg;C) --> high (45&deg;C) </div>
@@ -85,10 +88,11 @@
                         data-toggle="collapse"> (?) </button>
 </legend>
                    <div id="explain_days" class="collapse">
-                      Explanation here...  text text <br/>
-                      what does this do? <br/>
-                      what what are the parameters? <br/>
-                      is this related to climate change? <br/>
+                    The Department of Environment and Energy predicts that the <br/>
+                    number of days over 35&deg;C will increase from 17 days
+                    currently to 21 to 26 days per year. <br/>
+                    As well as impacting health, these hot days<br/>
+                    increase the risk for major bushfires.<br/>
                    </div>
                    <input type="range" name="hot_days" 
 			<?php echo "min=\"1\" max=\"31\"";
@@ -98,15 +102,13 @@
 
 
         <div class="col-md-4">
-                   <legend> Assume backburning has been happening recently?
+                   <legend> Has backburning happened recently?
                 <button href="#explain_burning" class="btn btn-default"
                         data-toggle="collapse"> (?) </button>
                    </legend>
                    <div id="explain_burning" class="collapse">
-                      Explanation here...  text text <br/>
-                      what does this do? <br/>
-                      what what are the parameters? <br/>
-                      is this related to climate change? <br/>
+                    Backburning is critical to reducing<br/>
+                    the fuel load and reducing the risk of fires. <br/>
                    </div>
                    <div class="checkbox"> <label>
                    <input type="checkbox" name="backburning"
