@@ -76,6 +76,8 @@
                //$backburning = $_GET["backburning"];
                $_WIB_backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 
+<div class="row">
+           <div class="col-md-6">
 	 	
 
 		if(!$required_fields_present)
@@ -90,10 +92,15 @@
 	       echo "<h1> <span class=\"label label-danger\"> $historical_odds % </span> </h1>";
 		}
 
-               echo "<div> Assuming you are in ";
+               echo "<div> You told us to assume you are in ";
 	       $region_name = get_region_name($_WIB_region);
 	       $month_name = get_month_name($_WIB_month);
                echo " $region_name in $month_name. <div>";
+
+
+           </div> <!-- end cell -->
+</div> <div class="row">
+           <div class="col-md-6">
 
 
 
@@ -111,13 +118,17 @@
 	       echo "<br/> - $num_backburns planned backburns.";
 	       echo "</div></div>";
 
-	       echo "<div> <label> Quick Facts...[this is example data!] </label>";
+           </div><div class="col-md-6">
+	       echo "<div class=\"panel panel-info\"> ";
+	       echo "<div class=\"panel-heading\"> ";
+	       echo "<h2 class=\"panel-title\"> Quick Facts...[this is example data!] </h2>";
+	       echo "</div><div class=\"panel-body\"> ";
 	       // current temps, bushfires and warnings... 
 	       echo "Today's temperature is 20&deg;C";
 	       echo "There are <b>no</b> current bushfires";
 	       echo "There is a strong wind and storm warning current";
 
-	       echo "</div>"; // end quick info panel
+	       echo "</div></div>"; // end quick info panel
 
 	
 
