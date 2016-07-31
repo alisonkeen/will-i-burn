@@ -106,10 +106,9 @@
 
 
 	         <div id="explain_result" class="collapse well">
-                      Explanation here...  text text <br/>
-                      elephants <br/> tigers <br/> ipineapplies <br/>
-                      elephants <br/> tigers <br/> ipineapplies <br/>
-                         foxes <br/> testing <br/>
+                      The Will I Burn model takes uses DEWNR bushfire data and<br/>
+                      BOM weather data to estimate the proportion of a region that<br/>
+                      may be affected by a bushfire in a month<br/>
                    </div>
 
            </div> <!-- end cell -->
