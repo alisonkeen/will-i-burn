@@ -76,13 +76,7 @@
                //$backburning = $_GET["backburning"];
                $_WIB_backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 
-               $region_name = get_region_name($_WIB_region);
-               echo "<p> Region: $region_name <br/>";
-	       $month_name = get_month_name($_WIB_month);
-               echo "Month: $month_name <br/>";
-               echo "Degree of heat: $_WIB_temp <br/>";
-               echo "# of hot days: $_WIB_hot_days <br/>";
-               echo "Backburning: $_WIB_backburning </p>";
+	 	
 
 		if(!$required_fields_present)
 		{
@@ -92,9 +86,40 @@
 		else
 		{
 		       $historical_odds = chance_of_fire($_WIB_region, $_WIB_month, $_WIB_temp, $_WIB_hot_days, $_WIB_backburning);
-	       echo "<h1> Chance of fire: </h1>";
+	       echo "<h1> Your chance of being in a fire: </h1>";
 	       echo "<h1> <span class=\"label label-danger\"> $historical_odds % </span> </h1>";
 		}
+
+               echo "<div> Assuming you are in ";
+	       $region_name = get_region_name($_WIB_region);
+	       $month_name = get_month_name($_WIB_month);
+               echo " $region_name in $month_name. <div>";
+
+
+
+	       // past bushfires and backburns... 
+	       // these functions are defined in api_fns.php
+	       $num_bushfires = get_num_bushfires($_WIB_region);
+	       $num_backburns = get_num_backburns($_WIB_region);
+
+	       echo "<div class=\"panel panel-info\"> ";
+	       echo "<div class=\"panel-heading\"> ";
+	       echo "<h2 class=\"panel-title\"> Historical Info: (from DEWNR data) </h2>"
+	       echo "</div><div class=\"panel-body\"> ";
+	       echo "In the last two years in $region_name there have been";
+	       echo "<br/> - $num_bushfires wild bushfires; and";
+	       echo "<br/> - $num_backburns planned backburns.";
+	       echo "</div></div>"
+
+	       echo "<div> <label> Quick Facts...[this is example data!] </label>"
+	       // current temps, bushfires and warnings... 
+	       echo "Today's temperature is 20&deg;C";
+	       echo "There are <b>no</b> current bushfires";
+	       echo "There is a strong wind and storm warning current";
+
+	       echo "</div>"; // end quick info panel
+
+	
 
 	    ?>
 
