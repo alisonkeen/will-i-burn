@@ -69,7 +69,7 @@
                    <div> low (0&deg;C) --> high (45&deg;C) </div>
 
                    <input type="range" name="temp" min="0" max="45" step="5" 
-			<?php echo "value=\"$_WIB_hot_days\"" ?>
+			<?php echo "value=\"$_WIB_temp\"" ?>
 
 		   > <!-- end input tag -->
 
