@@ -12,10 +12,29 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Back to Start</a></li>
-            <li><a href="dev.php">Development process</a></li>
-            <li><a href="findings.php">Findings</a></li>
-            <li><a href="about.php">About Team</a></li>
+<?php
+if ( $_SERVER['PHP_SELF'] =='/index.php'){
+echo "            <li class=\"active\"><a href=\"index.php\">Back to Start</a></li>";
+}
+else {
+echo "            <li><a href=\"index.php\">Back to Start</a></li>";
+}
+if ( $_SERVER['PHP_SELF'] =='/dev.php'){
+echo "            <li class=\"active\"><a href=\"dev.php\">Development process</a></li>";
+}else{
+echo "            <li><a href=\"dev.php\">Development process</a></li>";
+}
+if ( $_SERVER['PHP_SELF'] =='/findings.php'){
+echo "            <li class=\"active\"><a href=\"findings.php\">Findings</a></li>";
+}else{
+echo "            <li><a href=\"findings.php\">Findings</a></li>";
+}
+if ( $_SERVER['PHP_SELF'] =='/about.php'){
+echo "            <li class=\"active\"><a href=\"about.php\">About Team</a></li>";
+}else{
+echo "            <li><a href=\"about.php\">About Team</a></li>";
+}
+?>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
