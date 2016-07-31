@@ -44,7 +44,11 @@
         <div class="row">
 
         <p class="lead"> Find out the bushfire risk for your region </p>
-         
+
+        <div class="alert alert-success" role="alert">	
+	   There are currently <strong> no </strong> active bushfires
+	</div>
+ 
 	<form action="results.php">
        <div class="col-md-4">
 	    <legend>Select Your Region:</legend>
