@@ -55,12 +55,14 @@
                    <br/><br/>
            </div>
 
+</div><div class="row"> 
+
         <div class="col-md-4">
                    <legend> Average Monthly Temperature
                 <button href="#explain_temp" class="btn btn-default"
                         data-toggle="collapse"> (?) </button>
                    </legend>
-                   <div id="explain_temp" class="collapse">
+                   <div id="explain_temp" class="well collapse">
                     Its getting hot in here!<br/>
                     Climate Change means the average maximum temperature is expected to increase.<br/>
                     This variable lets you see what increases in average maximum monthly temperatures will do to bushfire risk in your region.<br/>
@@ -77,17 +79,12 @@
            </div>
 
 
-
-</div><div class="row"> 
-
-
-
            <div class="col-md-4">
                    <legend> Number of days above 35&deg;C this year (assumption):
                 <button href="#explain_days" class="btn btn-default"
                         data-toggle="collapse"> (?) </button>
 </legend>
-                   <div id="explain_days" class="collapse">
+                   <div id="explain_days" class="well collapse">
                     The Department of Environment and Energy predicts that the number of days over 35&deg;C will increase from 17 days currently to 21 to 26 days per year.<br/>
                     As well as impacting health, these hot days increase the risk for major bushfires.<br/>
                    </div>
@@ -103,7 +100,7 @@
                 <button href="#explain_burning" class="btn btn-default"
                         data-toggle="collapse"> (?) </button>
                    </legend>
-                   <div id="explain_burning" class="collapse">
+                   <div id="explain_burning" class="well collapse">
                     Backburning is critical to reducing the fuel load and reducing the risk of fires.<br/>
                    </div>
                    <div class="checkbox"> <label>
