@@ -6,8 +6,11 @@
 <div class="row"> 
 
            <div class="col-md-4"> 
+		<!-- regions SVG goes here -->
+		<img src="map.svg" class="img-thumbnail" alt="region map" >
+           </div> <div class="col-md-4"> 
 
-		   Region: 
+                   <legend> Select Region: </legend>
 		   <select name="region"> 
 
 <?php
