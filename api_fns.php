@@ -16,7 +16,7 @@ function http_get($url)
    $response = curl_exec($cinit);
    curl_close($cinit);
 
-   log_info("Request: $message\nResponse: $response");
+   log_info("Request: $url\nResponse: $response");
    return $response;
 }
 
