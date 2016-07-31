@@ -26,7 +26,7 @@ function chance_of_fire($region, $month, $temp, $hot_days, $backburning)
 
    $response = http_get($query_url);
    $probability_of_fire = trim($response, "[] ");
-   $percentage = (int)($probability_of_fire * 100);
+   $percentage = round($probability_of_fire * 100, 0);
    
    return $percentage;
 }
