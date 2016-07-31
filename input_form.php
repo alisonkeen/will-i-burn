@@ -85,7 +85,9 @@
                       what what are the parameters? <br/>
                       is this related to climate change? <br/>
                    </div>
-                   <input type="range" name="hot_days" min="1" max="15" >
+                   <input type="range" name="hot_days" 
+			<?php echo "min=\"1\" max=\"15\"";
+			      echo "value=\"$_WIB_hot_days\">" ?>
                    <br/><br/>
            </div>
 
@@ -102,8 +104,9 @@
                       is this related to climate change? <br/>
                    </div>
                    <div class="checkbox"> <label>
-                   <input type="checkbox" name="backburning" value="1"> Yes
-                   </label></div>
+                   <input type="checkbox" name="backburning"
+			      <?php echo "value=\"$_WIB_backburning\">" ?>
+                   Yes </label></div>
 
                    <br/><br/>
            </div>

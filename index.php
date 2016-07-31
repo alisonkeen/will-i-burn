@@ -50,11 +50,11 @@
 
 	<?php 
 		// set initial values... 
-		$_WIB_region = 1;  // I forget what region 1 is...
-		$_WIB_month = 1;  // January
-		$_WIB_temp = 20;  // average temp for month
+		$_WIB_region = 3;  // I forget what region 1 is...
+		$_WIB_month = 7;  // July
+		$_WIB_temp = 5;  // average temp for month
 		$_WIB_hot_days = 2; // 2 days above 35
-		$_WIB_backburning = 0; // default none
+		$_WIB_backburning = 1; // default none
 
 		include 'query_fns.php'; // because input form needs this
 
