@@ -43,14 +43,31 @@
 	<h1> Development process </h1>
 
 	<div class="row">
+ <div class="col-md-4">
 <h3> Data Flow </h3>
 <ul>
 <li>Data is downlaoded from <a href="data.sa.gov.au">data.sa.gov.au</a></li>
 <li>This is then improted into R to build a model</li>
 <li>This website is written in php and queries the model and displays results</li>
 </ul>
+</div>
+</div> <!-- End Row -->
+<div class="row">
+       <div class="col-md-4">
 <img src="images\data-flow.jpg">
+<span>Original work flow</span>
+</div>
+</div> <!-- End Row -->
 
+<div class="row">
+       <div class="col-md-4"><img src="images\whiteboard1.jpg"/>
+Query page mock up
+</div>
+</div> <!-- End Row -->
+<div class="row">
+       <div class="col-md-4"><img src="images\whiteboard2.jpg"/>
+Results page mock up
+</div>
 
 
 </div> <!-- End Row -->
