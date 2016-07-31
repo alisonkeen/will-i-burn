@@ -6,5 +6,5 @@
       echo 'Error connecting to database';
       echo 'please contact someone to take a look at this :(';
      exit;
-  }    
+  }
 ?>

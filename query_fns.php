@@ -9,7 +9,7 @@ function get_region_name(int $region_num)
      return "Not found ($region_num)";
    }
 
-   return pg_fetch_result($regions[0], 0);
+   return pg_fetch_result($regions, 0);
 }
 
 function chance_of_fire(int $region, int $month, int $temp, int $hot_days, int $backburning)
