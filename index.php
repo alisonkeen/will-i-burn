@@ -41,109 +41,26 @@
 
       <div class="starter-template">
         <h1>Will I Burn?</h1>
-        <div class="row">
 
         <p class="lead"> Find out the bushfire risk for your region </p>
 
         <div class="alert alert-success" role="alert">	
 	   There are currently <strong> no </strong> active bushfires
 	</div>
- 
-	<form action="results.php">
-       <div class="col-md-4">
-	    <legend>Select Your Region:</legend>
 
-            <select name="region">
-<?php
-$result = pg_query($dbconn, "select gid,region from sagovtregions");
-if (!$result) {
-  echo "An error occurred.\n";
-  exit;
-}
+	<?php 
+		// set initial values... 
+		$_WIB_region = 1;  // I forget what region 1 is...
+		$_WIB_month = 1;  // January
+		$_WIB_temp = 20;  // average temp for month
+		$_WIB_hot_days = 2; // 2 days above 35
+		$_WIB_backburning = 0; // default none
 
-while ($row = pg_fetch_row($result)) {
-  echo "                   <option value=\"$row[0]\">$row[1]</option>\n";
-}
-?>
-            </select>
+		include 'query_fns.php' // because input form needs this
 
-	    <br/><br/>
-        </div> <!-- end box/cell -->
-
-           <div class="col-md-4">
-                   <legend> Select Month: </legend>
-                   <select name="month">
-                      <option value="1"> January </option>
-                      <option value="2"> February </option>
-                      <option value="3"> March </option>
-                      <option value="4"> April </option>
-                      <option value="5"> May </option>
-                      <option value="6"> June </option>
-                      <option value="7"> July </option>
-                      <option value="8"> August </option>
-                      <option value="9"> September </option>
-                      <option value="10"> October </option>
-                      <option value="11"> November </option>
-                      <option value="12"> December </option>
-                   </select>
-                   <br/><br/>
-           </div>
-
-	<div class="col-md-4">
-                   <legend> Average Monthly Temperature 
-		<button href="#explain_temp" class="btn btn-default"
-                        data-toggle="collapse"> (?) </button>
-		   </legend>
-                   <div id="explain_temp" class="collapse">
-                      Explanation here...  text text <br/>
-                      elephants <br/> tigers <br/> ipineapplies <br/>
-                         foxes <br/> testing <br/>
-                   </div>
-
-		   <div> low ---> high </div>
-                   <input type="range" name="temp" min="0" max="100" step="10" >
-                   <br/><br/>
-           </div>
-           <div class="col-md-4">
-                   <legend> Number of days above 35&deg;C this year (assumption): 
-		<button href="#explain_days" class="btn btn-default"
-                        data-toggle="collapse"> (?) </button>
-</legend>
-                   <div id="explain_days" class="collapse">
-                      Explanation here...  text text <br/>
-		      what does this do? <br/>
-		      what what are the parameters? <br/>
-		      is this related to climate change? <br/>
-                   </div>
-                   <input type="range" name="hot_days" min="1" max="15" >
-                   <br/><br/>
-           </div>
-
-
-	<div class="col-md-4">
-                   <legend> Assume backburning has been happening recently? 
-		<button href="#explain_burning" class="btn btn-default"
-                        data-toggle="collapse"> (?) </button>
-		   </legend>
-                   <div id="explain_burning" class="collapse">
-                      Explanation here...  text text <br/>
-		      what does this do? <br/>
-		      what what are the parameters? <br/>
-		      is this related to climate change? <br/>
-                   </div>
-                   <div class="checkbox"> <label>
-                   <input type="checkbox" name="backburning" value="1"> Yes 
-                   </label></div>
-
-                   <br/><br/>
-           </div>
-
-
-        </div> <!-- end row -->
-
-	    <input class="btn btn-lg btn-danger" type="submit" value="Calculate the Odds!">
-	  </fieldset>
-	</form>
+		// display input form 
+		include 'input_form.php' 
+	?>
 
 
       </div>
