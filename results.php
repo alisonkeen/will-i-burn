@@ -96,12 +96,14 @@
                echo "<div> You told us to assume you are in ";
 	       $region_name = get_region_name($_WIB_region);
 	       $month_name = get_month_name($_WIB_month);
-               echo " $region_name in $month_name. <div>";
+               echo " $region_name in $month_name. ";
 
-		// Tooltip for number, here. ?> 
+		 ?> 
 
 		<button href="#explain_result" class="btn btn-default"
                  data-toggle="collapse"> (?) </button>
+		</div> 
+
 
 	         <div id="explain_result" class="collapse well">
                       Explanation here...  text text <br/>
