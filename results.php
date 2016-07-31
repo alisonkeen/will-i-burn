@@ -148,8 +148,8 @@
 	    ?>
 
       </div> <!--  end container? -->
-
-        <h1> Want to change your selections? </h1>
+   </div> 
+   <h1> Want to change your selections? </h1>
 	
 	<?php // display the input form
 	      include 'input_form.php' ?>

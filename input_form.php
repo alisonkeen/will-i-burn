@@ -7,7 +7,7 @@
 
            <div class="col-md-4"> 
 		<!-- regions SVG goes here -->
-		<img src="map.svg" class="img-thumbnail" alt="region map" >
+		<img src="images/map4.png" class="img-thumbnail" alt="region map" >
            </div> <div class="col-md-4"> 
 
                    <legend> Select Region: </legend>
