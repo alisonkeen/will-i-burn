@@ -1,4 +1,6 @@
-<?php include 'pgsql_connect.php' ?>
+<?php include 'pgsql_connect.php' 
+      include 'query_fns.php';
+      include 'api_fns.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,8 +44,6 @@
 	    <h1>Results Page </h1>
 
 	    <?php 
-         include 'query_fns.php';
-	       include 'api_fns.php';
 
                $required_fields_present = true;
                // Argument validation... 
@@ -96,30 +96,13 @@
 	       echo "<h1> <span class=\"label label-danger\"> $historical_odds % </span> </h1>";
 		}
 
-	function get_month_name($month)
-	{
-	   if(!is_int($month)) {
-	       // so check if it's a numeric string and convert...
-		if(is_numeric($month)) {
- 		   // $quicktemp = $month + 0; the cast below should skip this step?
-		   // $month = $quicktemp;
-		}
-		else {
-		   $required_fields_present = false;
-		   return "not an int";
-		}
-	   }
-
-	   $month_name = DateTime::createFromFormat('m', (int) $month)->format('F');
-	   return $month_name;
-	}
-
-
 	    ?>
 
       </div>
-        <h1> Want to change your selections? </h1> 
-	<?php include 'input_form.php' ?>
+        <h1> Want to change your selections? </h1>
+	
+	<?php // display the input form
+	      include 'input_form.php' ?>
 
     </div><!-- /.container -->
 

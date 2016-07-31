@@ -56,6 +56,9 @@
 		$_WIB_hot_days = 2; // 2 days above 35
 		$_WIB_backburning = 0; // default none
 
+		include 'query_fns.php' // because input form needs this
+
+		// display input form 
 		include 'input_form.php' 
 	?>
 
