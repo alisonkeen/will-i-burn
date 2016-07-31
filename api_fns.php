@@ -1,5 +1,10 @@
 <?php
 
+function log_info($message) {
+   #error_log($message, 3, 'my/file/path/log.txt');
+   error_log($message);
+}
+
 function http_get($url)
 {
    $cinit = curl_init();
@@ -10,6 +15,8 @@ function http_get($url)
    curl_setopt($cinit, CURLOPT_RETURNTRANSFER, 1);
    $response = curl_exec($cinit);
    curl_close($cinit);
+
+   log_info("Request: $message\n$Response: $response");
    return $response;
 }
 
