@@ -18,7 +18,7 @@ function chance_of_fire($region, $month, $temp, $hot_days, $backburning)
 {
    $query_url = "http://localhost:8123/perc?month=$month&region=$region&dry=0&temp=$temp&above.35=$hot_days&burnoff=$backburning";
 
-   $response = http_get($query_url);
+   $response = "[0.1234"; #http_get($query_url);
    $probability_of_fire = trim($response, "[] ");
    $percentage = (int)($probability_of_fire * 100);
    
