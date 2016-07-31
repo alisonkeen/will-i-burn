@@ -4,7 +4,7 @@
   $stat = pg_connection_status($dbconn);
   if ($stat != PGSQL_CONNECTION_OK) {
       echo 'Error connecting to database';
-      echo 'please contact some to take a look at this :(';
+      echo 'please contact someone to take a look at this :(';
      exit;
-  }    
+  }
 ?>
