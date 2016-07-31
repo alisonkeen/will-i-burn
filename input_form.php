@@ -5,10 +5,27 @@
 
 <div class="row"> 
 
-           <div class="col-md-4"> 
-		<!-- regions SVG goes here -->
-		<img src="images/map4.png" class="img-thumbnail" alt="region map" >
-           </div> <div class="col-md-4"> 
+           <div class="col-md-4">
+                   <legend> Select Month: </legend>
+                   <select name="month">
+		<?php 
+		   for($eachmonth = 1; $eachmonth < 13; $eachmonth++)
+		   {
+                      $monthname = get_month_name($eachmonth);
+                      echo "<option value=\"$eachmonth\"";
+		      if($eachmonth == $_WIB_month) echo "selected=\"selected\"";
+		      
+		      echo "> $monthname </option>";
+                      // <option value="1"> January </option>
+                      // <option value="2" selected="selected"> February </option>
+                      // <option value="3"> March </option>
+		   } ?>
+                   </select>
+                   <br/><br/>
+           </div>
+
+
+	<div class="col-md-4"> 
 
                    <legend> Select Region: </legend>
 		   <select name="region"> 
@@ -36,24 +53,17 @@
 
            </div>
 
-           <div class="col-md-4">
-                   <legend> Select Month: </legend>
-                   <select name="month">
-		<?php 
-		   for($eachmonth = 1; $eachmonth < 13; $eachmonth++)
-		   {
-                      $monthname = get_month_name($eachmonth);
-                      echo "<option value=\"$eachmonth\"";
-		      if($eachmonth == $_WIB_month) echo "selected=\"selected\"";
-		      
-		      echo "> $monthname </option>";
-                      // <option value="1"> January </option>
-                      // <option value="2" selected="selected"> February </option>
-                      // <option value="3"> March </option>
-		   } ?>
-                   </select>
-                   <br/><br/>
-           </div>
+           <div class="col-md-6"> 
+                <button href="#region_map" class="btn btn-default"
+                        data-toggle="collapse"> (?) </button>
+</legend>
+                   <div id="region_map" class="collapse">
+		<legend> Region Map </legend>
+		<!-- regions SVG goes here -->
+		<img src="images/map4.png" class="img" alt="region map" >
+                   </div>
+           </div> 
+
 
 </div><div class="row"> 
 
