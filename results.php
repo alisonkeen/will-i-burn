@@ -48,10 +48,10 @@
                $required_fields_present = true;
                // Argument validation... 
                if(isset($_GET["region"]))
-			$region = $_GET["region"];
+			$_WIB_region = $_GET["region"];
 		else
 		{
-			$region = 0;
+			$_WIB_region = 0;
 			$required_fields_present = false;
 		}	
                //$region = $_GET["region"];
@@ -59,30 +59,30 @@
                //$month = $_GET["month"];
                if(isset($_GET["month"]))
 		{
-			$month = $_GET["month"];
+			$_WIB_month = $_GET["month"];
 		}
 		else
 		{
-			$month = 0;
+			$_WIB_month = 0;
 			$required_fields_present = false;
 		}	
 
                //$temp = $_GET["temp"];
-               $temp = isset($_GET["temp"]) ? $_GET["temp"] : 0;
+               $_WIB_temp = isset($_GET["temp"]) ? $_GET["temp"] : 0;
 
-               $hot_days = isset($_GET["hot_days"]) ? $_GET["hot_days"] : 0;
+               $_WIB_hot_days = isset($_GET["hot_days"]) ? $_GET["hot_days"] : 0;
                //$hot_days = $_GET["hot_days"];
 
                //$backburning = $_GET["backburning"];
-               $backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
+               $_WIB_backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 
-               $region_name = get_region_name($region);
+               $region_name = get_region_name($_WIB_region);
                echo "<p> Region: $region_name <br/>";
-	       $month_name = get_month_name($month);
+	       $month_name = get_month_name($_WIB_month);
                echo "Month: $month_name <br/>";
-               echo "Degree of heat: $temp <br/>";
-               echo "# of hot days: $hot_days <br/>";
-               echo "Backburning: $backburning </p>";
+               echo "Degree of heat: $_WIB_temp <br/>";
+               echo "# of hot days: $_WIB_hot_days <br/>";
+               echo "Backburning: $_WIB_backburning </p>";
 
 		if(!$required_fields_present)
 		{
@@ -91,7 +91,7 @@
 		}
 		else
 		{
-		       $historical_odds = chance_of_fire($region, $month, $temp, $hot_days, $backburning);
+		       $historical_odds = chance_of_fire($_WIB_region, $_WIB_month, $_WIB_temp, $_WIB_hot_days, $_WIB_backburning);
 	       echo "<h1> Chance of fire: </h1>";
 	       echo "<h1> <span class=\"label label-danger\"> $historical_odds % </span> </h1>";
 		}

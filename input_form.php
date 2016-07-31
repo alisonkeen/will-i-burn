@@ -20,7 +20,7 @@
 
 	while ($row = pg_fetch_row($result)) {
 	  echo "  <option value=\"$row[0]\"";
-	  if($row[0] == $region) echo "selected=\"selected\"";
+	  if($row[0] == $_WIB_region) echo "selected=\"selected\"";
 	  echo ">$row[1]</option>\n";
 	}
 			// examples of what end syntax should look like
@@ -42,7 +42,7 @@
 		   {
                       $monthname = get_month_name($eachmonth);
                       echo "<option value=\"$eachmonth\"";
-		      if($eachmonth == $month) echo "selected=\"selected\"";
+		      if($eachmonth == $_WIB_month) echo "selected=\"selected\"";
 		      
 		      echo "> $monthname </option>";
                       // <option value="1"> January </option>
@@ -54,10 +54,11 @@
            </div>
 
            <div class="col-md-4"> 
-		   <legend> Will this be a relatively hot year? </legend>
+		   <legend> Average Monthly Temperature </legend>
 		   <input type="range" id="temp" min="0" max="100" step="10" >
 		   <br/><br/>
            </div>
+</div><div class="row"> 
            <div class="col-md-4"> 
 		   <legend> Number of days above 35&deg;C this year (assumption): </legend>
 		   <input type="range" id="hot_days" min="1" max="15" >
