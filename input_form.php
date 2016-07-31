@@ -49,13 +49,14 @@
 
 
 		   </select>
+		<br/>
+                <button href="#region_map" class="btn btn-default"
+                        data-toggle="collapse"> Show Map </button>
 		   <br/><br/>
 
            </div>
 
            <div class="col-md-6"> 
-                <button href="#region_map" class="btn btn-default"
-                        data-toggle="collapse"> (?) </button>
 </legend>
                    <div id="region_map" class="collapse">
 		<legend> Region Map </legend>
