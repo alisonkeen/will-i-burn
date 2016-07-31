@@ -64,7 +64,12 @@
                    </div>
 
                    <div> low ---> high </div>
-                   <input type="range" name="temp" min="5" max="50" step="5" >
+
+                   <input type="range" name="temp" min="5" max="50" step="5" 
+			<?php echo "value=\"$_WIB_hot_days\"" ?>
+
+		   > <!-- end input tag -->
+
                    <br/><br/>
            </div>
 
@@ -86,7 +91,7 @@
                       is this related to climate change? <br/>
                    </div>
                    <input type="range" name="hot_days" 
-			<?php echo "min=\"1\" max=\"15\"";
+			<?php echo "min=\"1\" max=\"31\"";
 			      echo "value=\"$_WIB_hot_days\">" ?>
                    <br/><br/>
            </div>
@@ -105,7 +110,11 @@
                    </div>
                    <div class="checkbox"> <label>
                    <input type="checkbox" name="backburning"
-			      <?php echo "value=\"$_WIB_backburning\">" ?>
+		   
+                   <?php 
+			if($_WIB_backburning == 1 )
+			echo "checked=\"true\" " ?>
+                   >
                    Yes </label></div>
 
                    <br/><br/>
