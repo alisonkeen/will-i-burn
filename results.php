@@ -76,7 +76,7 @@
                //$backburning = $_GET["backburning"];
                $_WIB_backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 ?>
-   <div class="row">
+    <div class="row">
            <div class="col-md-6">
 	 	
 <?php
