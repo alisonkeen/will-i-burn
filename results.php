@@ -98,7 +98,18 @@
 	       $month_name = get_month_name($_WIB_month);
                echo " $region_name in $month_name. <div>";
 
-?>
+		// Tooltip for number, here. ?> 
+
+		<button href="#explain_result" class="btn btn-default"
+                 data-toggle="collapse"> (?) </button>
+
+	         <div id="explain_result" class="collapse well">
+                      Explanation here...  text text <br/>
+                      elephants <br/> tigers <br/> ipineapplies <br/>
+                      elephants <br/> tigers <br/> ipineapplies <br/>
+                         foxes <br/> testing <br/>
+                   </div>
+
            </div> <!-- end cell -->
 </div> <div class="row">
            <div class="col-md-6">
