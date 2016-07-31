@@ -42,14 +42,14 @@
 	<h1> About Team "Red Hot" </h1>
 
 	<div class="row">
-
-	<form action="results2.php">
-
-	   <fieldset>
-
            <div class="col-md-12">
                <p> We are a bunch of programmers from Adelaide, who are otherwise unaffiliated. </p> 
            </div>
+           <div class="col-md-4">
+               <h2> Alison  </h2> 
+              <p> Alison has been doing bits and pieces where she can, such as creating forms and basic interfaces, updating the team hackerspace, and generally nodding along and smiling. </p>
+           </div>
+
 
            <div class="col-md-4">
                <h2> Alex </h2> 
@@ -60,9 +60,10 @@
                <h2> Tim </h2> 
               <p> Tim has been tirelessly churning through large amounts of bushfire, temperature and climate prediction data using R in search of trends, interesting information and patterns </p>
            </div>
-
+        </div> <!-- End Row -->
+        <div class="row">
            <div class="col-md-4">
-               <h2> Rowan </h2> 
+              <h2> Rowan </h2> 
               <p> Rowan has been churning through GIS data to help make sense of the places and spaces involved in past and potential bushfires </p> 
            </div>
 
@@ -71,17 +72,12 @@
               <p> Daniel has served as webmaster, systems administrator, resident Linux expert, genius at all programming languages (especially SQL/PostgreSQL) and manager of domains </p>
            </div>
 
-           <div class="col-md-4">
-               <h2> Alison  </h2> 
-              <p> Alison has been doing bits and pieces where she can, such as creating forms and basic interfaces, updating the team hackerspace, and generally nodding along and smiling. </p>
+           <div  class="col-md-4">
+               <h2>Verity Colyer</h2>
+               <p>Verity is a film editor at Tigerfire productions, Production Runner for the BBC and is studying film effects at Tafe SA. The video for ‘Will I Burn’ was filmed and edited by Verity.</p>
            </div>
-
-
-   </fieldset>
-</form>
-
-</div> <!-- End Row -->
-</div> <!-- End Container -->
+       </div> <!-- End Row -->
+    </div> <!-- End Container -->
 
 
 
