@@ -77,7 +77,7 @@
                $_WIB_backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 ?>
     <div class="row">
-           <div class="col-md-6">
+           <div class="col-md-12">
 	 	
 <?php
 
@@ -119,7 +119,7 @@
 	       echo "<br/> - $num_backburns planned backburns.";
 	       echo "</div></div>";
 
-               echo "</div><div class=\"col-md-6\">";
+         echo "</div><div class=\"col-md-6\">";
 
 	       echo "<div class=\"panel panel-info\"> ";
 	       echo "<div class=\"panel-heading\"> ";
@@ -130,19 +130,18 @@
 	       echo "There are <b>no</b> current bushfires";
 	       echo "There is a strong wind and storm warning current";
 
-	       echo "</div></div>"; // end quick info panel
+     echo "</div></div>"; // end quick info panel
 
 	
 
 	    ?>
 
-      </div>
+      </div> <!--  end container? -->
+
         <h1> Want to change your selections? </h1>
 	
 	<?php // display the input form
 	      include 'input_form.php' ?>
-
-    </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
