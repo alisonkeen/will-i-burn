@@ -28,3 +28,22 @@ perc <- function(month, region, temp, above.35){
   newdata <- data.frame(Month, Region, Temp, Above.35)
   predict(model.perc, newdata = newdata)
 }
+
+
+bf <- read.csv("Bushfire_database.csv")
+
+bf$FIREDATE <- mdy(bf$FIREDATE)
+
+#* @get /bushfire_count
+bushfire_count <- function(region){
+  date <- (Sys.Date()-(365)*2)
+  date <- ymd(date)
+  nrow(subset(bf, FIREDATE > date & region_code == region & INCIDENTTY == "Bushfire"))
+}
+
+#* @get /prescribed_count
+prescribed_count <- function(region){
+  date <- (Sys.Date()-(365)*2)
+  date <- ymd(date)
+  nrow(subset(bf, FIREDATE > date & region_code == region & INCIDENTTY == "Prescribed Burn"))
+}
