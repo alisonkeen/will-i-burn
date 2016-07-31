@@ -1,8 +1,7 @@
 <?php
 
 function log_info($message) {
-   #error_log($message, 3, 'my/file/path/log.txt');
-   error_log($message);
+   error_log("$message\n", 3, '/var/log/apache2info/info.log');
 }
 
 function http_get($url)
