@@ -75,7 +75,7 @@
                //$backburning = $_GET["backburning"];
                $backburning = isset($_GET["backburning"]) ? $_GET["backburning"] : 0;
 
-               $region_name = get_region_name($region, $dbconn);
+               $region_name = get_region_name($region);
                echo "<p> Region: $region_name <br/>";
 	       $month_name = get_month_name($month);
                echo "Month: $month_name <br/>";
