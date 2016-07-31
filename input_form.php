@@ -63,9 +63,9 @@
                          foxes <br/> testing <br/>
                    </div>
 
-                   <div> low ---> high </div>
+                   <div> low (0&deg;C) --> high (45&deg;C) </div>
 
-                   <input type="range" name="temp" min="5" max="50" step="5" 
+                   <input type="range" name="temp" min="0" max="45" step="5" 
 			<?php echo "value=\"$_WIB_hot_days\"" ?>
 
 		   > <!-- end input tag -->
