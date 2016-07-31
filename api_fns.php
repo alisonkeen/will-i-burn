@@ -37,14 +37,21 @@ function get_num_backburns(int $region)
 {
    // this function needs to run the query to grab 
    // the number of backburns in the last 2 years... 
-   return 2;
+
+   $query_url = "http://localhost:8123/prescribed_count?region=$region";
+   $response = http_get($query_url);
+   $num_backburns = trim($response, "[] ");
+   return $num_backburns;
 }
 
 function get_num_bushfires(int $region)
 {
    // this function needs to run the R query to grab
    // the number of bushfires in the last 2 years...
-   return 4;
+   $query_url = "http://localhost:8123/bushfire_count?region=$region";
+   $response = http_get($query_url);
+   $num_bushfires = trim($response, "[] ");
+   return $num_bushfires;
 }
 
 ?>
