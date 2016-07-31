@@ -118,7 +118,7 @@
 	    ?>
 
       </div>
-
+        <h1> Want to change your selections? </h1> 
 	<?php include 'input_form.php' ?>
 
     </div><!-- /.container -->

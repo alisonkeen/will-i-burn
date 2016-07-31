@@ -1,6 +1,5 @@
 
 <div class="container">
-<h1> Want to change the parameters? </h1>
 
 <form action="results.php">
 
@@ -53,33 +52,63 @@
                    <br/><br/>
            </div>
 
-           <div class="col-md-4"> 
-		   <legend> Average Monthly Temperature </legend>
-		   <input type="range" id="temp" min="0" max="100" step="10" >
-		   <br/><br/>
+        <div class="col-md-4">
+                   <legend> Average Monthly Temperature
+                <button href="#explain_temp" class="btn btn-default"
+                        data-toggle="collapse"> (?) </button>
+                   </legend>
+                   <div id="explain_temp" class="collapse">
+                      Explanation here...  text text <br/>
+                      elephants <br/> tigers <br/> ipineapplies <br/>
+                         foxes <br/> testing <br/>
+                   </div>
+
+                   <div> low ---> high </div>
+                   <input type="range" name="temp" min="5" max="50" step="5" >
+                   <br/><br/>
            </div>
+
+
+
 </div><div class="row"> 
-           <div class="col-md-4"> 
-		   <legend> Number of days above 35&deg;C this year (assumption): </legend>
-		   <input type="range" id="hot_days" min="1" max="15" >
-		   <br/><br/>
+
+
+
+           <div class="col-md-4">
+                   <legend> Number of days above 35&deg;C this year (assumption):
+                <button href="#explain_days" class="btn btn-default"
+                        data-toggle="collapse"> (?) </button>
+</legend>
+                   <div id="explain_days" class="collapse">
+                      Explanation here...  text text <br/>
+                      what does this do? <br/>
+                      what what are the parameters? <br/>
+                      is this related to climate change? <br/>
+                   </div>
+                   <input type="range" name="hot_days" min="1" max="15" >
+                   <br/><br/>
            </div>
 
-           <div class="col-md-4"> 
-		<fieldset>
-		   <legend> Assume backburning has been happening recently? </legend>
-		   <div class="radio-inline"> <label> 
-		   <input type="radio" name="backburning" value="1"> Yes 
-		   </label></div>
 
-		   <div class="radio-inline"> <label> 
-		   <input type="radio" name="backburning" value="0"> No 
-		   </label></div>
-		   <br/><br/>
-   		</fieldset>
+        <div class="col-md-4">
+                   <legend> Assume backburning has been happening recently?
+                <button href="#explain_burning" class="btn btn-default"
+                        data-toggle="collapse"> (?) </button>
+                   </legend>
+                   <div id="explain_burning" class="collapse">
+                      Explanation here...  text text <br/>
+                      what does this do? <br/>
+                      what what are the parameters? <br/>
+                      is this related to climate change? <br/>
+                   </div>
+                   <div class="checkbox"> <label>
+                   <input type="checkbox" name="backburning" value="1"> Yes
+                   </label></div>
+
+                   <br/><br/>
            </div>
+
      
-
 
    <div class="col-md-4">
       <input class="btn btn-lg btn-danger" type="submit" value="Calculate the Odds!">
