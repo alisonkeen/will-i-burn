@@ -5,7 +5,7 @@
 
 <div class="row"> 
 
-           <div class="col-md-4">
+           <div class="col-md-6">
                    <legend> Select Month: </legend>
                    <select name="month">
 		<?php 
@@ -25,7 +25,7 @@
            </div>
 
 
-	<div class="col-md-4"> 
+	<div class="col-md-6"> 
 
                    <legend> Select Region: </legend>
 		   <select name="region"> 
@@ -56,7 +56,7 @@
 
            </div>
 
-           <div class="col-md-6"> 
+           <div class="col-md-12"> 
 </legend>
                    <div id="region_map" class="collapse">
 		<legend> Region Map </legend>

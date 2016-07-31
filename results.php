@@ -126,8 +126,8 @@
 	       echo "<h2 class=\"panel-title\"> Historical Info: (from DEWNR data) </h2>";
 	       echo "</div><div class=\"panel-body\"> ";
 	       echo "In the last two years in $region_name there have been";
-	       echo "<br/> - $num_bushfires wild bushfires; and";
-	       echo "<br/> - $num_backburns planned backburns.";
+	       echo "<br/> - <b> $num_bushfires </b> wild bushfires; and";
+	       echo "<br/> - <b> $num_backburns </b> planned backburns.";
 	       echo "</div></div>";
 
          echo "</div><div class=\"col-md-6\">";
@@ -137,9 +137,9 @@
 	       echo "<h2 class=\"panel-title\"> Quick Facts...[this is example data!] </h2>";
 	       echo "</div><div class=\"panel-body\"> ";
 	       // current temps, bushfires and warnings... 
-	       echo "Today's temperature is 20&deg;C";
-	       echo "There are <b>no</b> current bushfires";
-	       echo "There is a strong wind and storm warning current";
+	       echo "<p>Today's temperature is 20&deg;C</p>";
+	       echo "<p>There are <b>no</b> current bushfires</p>";
+	       echo "<p>There is a strong wind and storm warning current</p>";
 
      echo "</div></div>"; // end quick info panel
 
