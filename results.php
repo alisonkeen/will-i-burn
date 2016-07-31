@@ -1,4 +1,4 @@
-<?php include 'pgsql_connect.php' 
+<?php include 'pgsql_connect.php';
       include 'query_fns.php';
       include 'api_fns.php'; ?>
 <!DOCTYPE html>
