@@ -37,7 +37,86 @@
 
     <?php include 'navbar.php' ?>
 
-    <?php include 'input_form.php' ?>
+
+<div class="container">
+<h1> Alison's No-PostgreSQL test interface... </h1>
+
+<form action="results.php">
+
+<div class="row"> 
+
+           <div class="col-md-4"> 
+
+                   <legend> Select Region: 
+		      <button href="#regionexp" class="btn btn-default"
+			data-toggle="collapse"> (?) </button>
+		   </legend>
+		   <div id="regionexp" class="collapse"> 
+		      Explanation here...  text text <br/>
+		      elephants <br/> tigers <br/> ipineapplies <br/>
+			 foxes <br/> testing <br/> 
+		   </div>
+		   <select name="region"> 
+		       <option name="1"> Adelaide Hills </option>
+		       <option name="2" selected=\"selected\"> Adelaide Metro </option>
+
+		   </select>
+		   <br/><br/>
+
+           </div>
+
+           <div class="col-md-4">
+                   <legend> Select Month: 
+		      <button href="#mon_exp" class="btn btn-default"
+			data-toggle="collapse"> (?) </button>
+		   </legend>
+		   <div id="mon_exp" class="collapse"> 
+		      explanation... 
+		   </div>
+                   <select name="month">
+                       <option value="1"> January </option>
+                       <option value="2" selected="selected"> February </option>
+                       <option value="3"> March </option>
+                   </select>
+                   <br/><br/>
+           </div>
+
+           <div class="col-md-4"> 
+		   <legend> Average Monthly Temperature: </legend>
+		   <div> low  -->  high </div>
+		   <input type="range" id="temp" min="0" max="100" step="10" >
+		   <br/><br/>
+           </div>
+</div> <div class="row">  
+           <div class="col-md-4"> 
+		   <legend> Number of days above 35&deg;C this year (assumption): </legend>
+		   <input type="range" id="hot_days" min="1" max="15" >
+		   <br/><br/>
+           </div>
+
+           <div class="col-md-4"> 
+		<fieldset>
+		   <legend> Assume backburning has been happening recently? </legend>
+		   <div class="radio-inline"> <label> 
+		   <input type="radio" name="backburning" value="1"> Yes 
+		   </label></div>
+
+		   <div class="radio-inline"> <label> 
+		   <input type="radio" name="backburning" value="0"> No 
+		   </label></div>
+		   <br/><br/>
+   		</fieldset>
+           </div>
+     
+
+
+   <div class="col-md-4">
+      <input class="btn btn-lg btn-danger" type="submit" value="Calculate the Odds!">
+   </div>
+
+</div> <!-- End Row -->
+</form>
+</div> <!-- End Container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -50,5 +129,4 @@
     <script src="bootstrap-3.3.7-dist/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
-
 

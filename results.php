@@ -101,8 +101,8 @@
 	   if(!is_int($month)) {
 	       // so check if it's a numeric string and convert...
 		if(is_numeric($month)) {
- 		   $quicktemp = $month + 0;
-		   $month = $quicktemp;
+ 		   // $quicktemp = $month + 0; the cast below should skip this step?
+		   // $month = $quicktemp;
 		}
 		else {
 		   $required_fields_present = false;
@@ -110,7 +110,7 @@
 		}
 	   }
 
-	   $month_name = DateTime::createFromFormat('m', $month)->format('F');
+	   $month_name = DateTime::createFromFormat('m', (int) $month)->format('F');
 	   return $month_name;
 	}
 
