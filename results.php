@@ -42,7 +42,8 @@
 	    <h1>Results Page </h1>
 
 	    <?php 
-	       include 'query_fns.php';
+         include 'query_fns.php';
+	       include 'api_fns.php';
 
                $required_fields_present = true;
                // Argument validation... 
