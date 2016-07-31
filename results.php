@@ -98,11 +98,11 @@
 	       $month_name = get_month_name($_WIB_month);
                echo " $region_name in $month_name. <div>";
 
-
+?>
            </div> <!-- end cell -->
 </div> <div class="row">
            <div class="col-md-6">
-
+<?php
 
 
 	       // past bushfires and backburns... 
@@ -119,7 +119,8 @@
 	       echo "<br/> - $num_backburns planned backburns.";
 	       echo "</div></div>";
 
-           </div><div class="col-md-6">
+               echo "</div><div class=\"col-md-6\">";
+
 	       echo "<div class=\"panel panel-info\"> ";
 	       echo "<div class=\"panel-heading\"> ";
 	       echo "<h2 class=\"panel-title\"> Quick Facts...[this is example data!] </h2>";
