@@ -1,24 +1,30 @@
+library(lubridate)
 library(caret)
-library(rpart)
+library(nnet)
 
-df <- read.csv("FAKE_Unleashed_Data_Framework.csv")
+df <- read.csv("Unleashed_Data_Framework.csv")
 
-model.perc <- train(HectarePerc ~ Month+Region+Temp+Above.35, data = df, method = "lm")
+df$Date <- dmy(df$Date)
+df$Region <- as.factor(df$Region)
+df$Year <- as.factor(df$Year)
+df$Month <- as.factor(df$Month)
+df$Above.35 <- as.numeric(df$Above.35)
+df$Burnoff <- as.numeric(df$Burnoff)
+df$Hectares.burned <- as.numeric(df$Hectares.burned)
+df$Region.Hectares <- as.numeric(df$Region.Hectares)
+df$Bushfire <- as.factor(df$Bushfire)
+df$Severe.Bushfire <- as.factor(df$Severe.Bushfire)
+
+model.perc <- train(Hectare.Percent.Burnt~Month+Region+Temp+Above.35, data = df, method = "nnet")
 
 #* @get /perc
 perc <- function(month, region, temp, above.35){
   
-  Month <- as.numeric(month)
-  Region <- as.numeric(region)
+  Month <- as.factor(month)
+  Region <- as.factor(region)
   Temp <- as.numeric(temp)
   Above.35 <- as.numeric(above.35)
-
+  
   newdata <- data.frame(Month, Region, Temp, Above.35)
   predict(model.perc, newdata = newdata)
-}
-
-
-#* @get /example
-example <- function(param1="", param2="", param3=""){
-  paste("You sent: param1=", param1, "; param2=", param2, "; param3=", param3, sep="")
 }

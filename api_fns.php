@@ -22,11 +22,11 @@ function http_get($url)
 
 function chance_of_fire($region, $month, $temp, $hot_days, $backburning)
 {
-   $query_url = "http://localhost:8123/perc?month=$month&region=$region&dry=0&temp=$temp&above.35=$hot_days&burnoff=$backburning";
+   $query_url = "http://localhost:8123/perc?month=$month&region=$region&temp=$temp&above.35=$hot_days";
 
    $response = http_get($query_url);
    $probability_of_fire = trim($response, "[] ");
-   $percentage = round($probability_of_fire * 100, 0);
+   $percentage = round($probability_of_fire * 100, 1);
    
    return $percentage;
 }
