@@ -41,7 +41,6 @@
     <div class="container">
 
       <div class="starter-template">
-	    <h1>Results Page </h1>
 
 	    <?php 
 
