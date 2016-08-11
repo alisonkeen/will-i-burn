@@ -1,4 +1,4 @@
-<?php include 'pgsql_connect.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Will I Burn? Govhack 2016">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.png"> 
+    <link rel="icon" href="favicon.ico"> 
 
     <title>Will I Burn? | Govhack Unleashed 2016</title>
 
@@ -24,7 +24,7 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,35 +37,48 @@
 
     <?php include 'navbar.php' ?>
 
-    <div class="container">
 
-      <div class="starter-template">
-        <h1>Will I Burn?</h1>
+	<div class="container">
+	<h1> About Team "Red Hot" </h1>
 
-        <p class="lead">Find out your bushfire risk</p>
-
-        <div class="alert alert-success" role="alert">	
-	   There are currently <strong> no </strong> active bushfires
-	</div>
-
-	<?php 
-		// set initial values... 
-		$_WIB_region = 3;  // I forget what region 1 is...
-		$_WIB_month = 7;  // July
-		$_WIB_temp = 5;  // average temp for month
-		$_WIB_hot_days = 2; // 2 days above 35
-		$_WIB_backburning = 1; // default none
-
-		include 'query_fns.php'; // because input form needs this
-
-		// display input form 
-		include 'input_form.php'; 
-	?>
+	<div class="row">
+           <div class="col-md-12">
+               <p> We are a bunch of programmers from Adelaide, who are otherwise unaffiliated. </p> 
+           </div>
+           <div class="col-md-4">
+               <h2> Alison  </h2> 
+              <p> Alison has been doing bits and pieces where she can, such as creating forms and basic interfaces, updating the team hackerspace, and generally nodding along and smiling. </p>
+           </div>
 
 
-      </div>
+           <div class="col-md-4">
+               <h2> Alex </h2> 
+              <p> Alex is a programming genius who has contributed by working on the R API and PostgreSQL operations to help make sense of the data </p>
+           </div>
 
-    </div><!-- /.container -->
+           <div class="col-md-4">
+               <h2> Tim </h2> 
+              <p> Tim has been tirelessly churning through large amounts of bushfire, temperature and climate prediction data using R in search of trends, interesting information and patterns </p>
+           </div>
+        </div> <!-- End Row -->
+        <div class="row">
+           <div class="col-md-4">
+              <h2> Rowan </h2> 
+              <p> Rowan has been churning through GIS data to help make sense of the places and spaces involved in past and potential bushfires </p> 
+           </div>
+
+           <div class="col-md-4">
+               <h2> Daniel </h2> 
+              <p> Daniel has served as webmaster, systems administrator, resident Linux expert, genius at all programming languages (especially SQL/PostgreSQL) and manager of domains </p>
+           </div>
+
+           <div  class="col-md-4">
+               <h2>Verity Colyer</h2>
+               <p>Verity is a film editor at Tigerfire productions, Production Runner for the BBC and is studying film effects at Tafe SA. The video for ‘Will I Burn’ was filmed and edited by Verity.</p>
+           </div>
+       </div> <!-- End Row -->
+    </div> <!-- End Container -->
+
 
 
     <!-- Bootstrap core JavaScript

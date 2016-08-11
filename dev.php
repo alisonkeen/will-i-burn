@@ -1,4 +1,4 @@
-<?php include 'pgsql_connect.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="Will I Burn? Govhack 2016">
     <meta name="author" content="">
-    <link rel="icon" href="favicon.png"> 
+    <link rel="icon" href="favicon.ico"> 
 
     <title>Will I Burn? | Govhack Unleashed 2016</title>
 
@@ -24,48 +24,60 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
   </head>
 
   <body>
 
     <?php include 'navbar.php' ?>
 
-    <div class="container">
 
-      <div class="starter-template">
-        <h1>Will I Burn?</h1>
+	<div class="container">
+	<h1> Development process </h1>
 
-        <p class="lead">Find out your bushfire risk</p>
+	<div class="row">
+ <div class="col-md-4">
+<h3> Data Flow </h3>
+<ul>
+<li>Data is downlaoded from <a href="data.sa.gov.au">data.sa.gov.au</a></li>
+<li>This is then improted into R to build a model</li>
+<li>This website is written in php and queries the model and displays results</li>
+</ul>
+</div>
+</div> <!-- End Row -->
+<div class="row">
+       <div class="col-md-4">
+<img src="images\data-flow.jpg">
+<span>Original work flow</span>
+</div>
+</div> <!-- End Row -->
 
-        <div class="alert alert-success" role="alert">	
-	   There are currently <strong> no </strong> active bushfires
-	</div>
-
-	<?php 
-		// set initial values... 
-		$_WIB_region = 3;  // I forget what region 1 is...
-		$_WIB_month = 7;  // July
-		$_WIB_temp = 5;  // average temp for month
-		$_WIB_hot_days = 2; // 2 days above 35
-		$_WIB_backburning = 1; // default none
-
-		include 'query_fns.php'; // because input form needs this
-
-		// display input form 
-		include 'input_form.php'; 
-	?>
+<div class="row">
+       <div class="col-md-4"><img src="images\whiteboard1.jpg"/>
+Query page mock up
+</div>
+</div> <!-- End Row -->
+<div class="row">
+       <div class="col-md-4"><img src="images\whiteboard2.jpg"/>
+Results page mock up
+</div>
 
 
-      </div>
+</div> <!-- End Row -->
+<div class="row">
 
-    </div><!-- /.container -->
+<h3>Source Code</h3>
+Download the source code from github at: <a href="https://github.com/alexg-hacks/will-i-burn">https://github.com/alexg-hacks/will-i-burn<i class="fa fa-github" aria-hidden="true"></i></a>
+</div> <!-- End Row -->
+</div> <!-- End Container -->
+
 
 
     <!-- Bootstrap core JavaScript
